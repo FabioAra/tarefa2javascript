@@ -1,23 +1,55 @@
 <!DOCTYPE html>
-<html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
+<html>   
 
-<body>
-  Hello world
-  <script src="script.js"></script>
+   <head>
 
- <!--
-  This script places a badge on your repl's full-browser view back to your repl's cover
-  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
-  teal, blue, blurple, magenta, pink!
-  -->
-  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script> 
-</body>
+      <meta charset="UTF-8">      
+
+   </head>
+
+   
+
+   <body>
+
+      <div id="meu amor"><button id="botaoCarregar">Carregando cervejas...</button></div>            
+
+   </body>   
+
+   
+
+   <script>
+
+      let cervejas = ["Guiness", "Desperados", "Becks"]
+
+      
+
+      function transformar(item){
+
+         return `<h1>${item}</h1>`
+
+      }
+
+      
+
+      function carregarDiv(){
+
+         let div = document.getElementById("meu amor")
+
+         //let cervejasHtml = [`<h1>${cervejas[0]}</h1>`,`<h1>${cervejas[1]}</h1>`, `<h1>${cervejas[2]}</h1>`] 
+
+         let cervejasHtml = cervejas.map(transformar) 
+
+         div.innerHTML = `${cervejasHtml.join("\n")}`
+
+      }
+
+      
+
+      let botao = document.getElementById("botaoCarregar")
+
+      botao.addEventListener("click", carregarDiv)                 
+
+   </script>
 
 </html>
