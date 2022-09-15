@@ -1,4 +1,13 @@
-html, body {
-  height: 100%;
-  width: 100%;
-}
+#div{
+      background-color: yellow; 
+      border-style: outset;
+      text-align: center;
+      font-family:arial;
+      text-shadow: 1px 1px rgb(0, 106, 255);
+    }
+table,td {
+      border: 1px solid;
+      border-style: outset;
+      background-color: rgb(102,	205,	170);
+      font-family:arial;
+         }
